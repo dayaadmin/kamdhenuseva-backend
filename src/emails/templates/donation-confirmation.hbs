@@ -1,0 +1,152 @@
+<!-- src/emails/templates/donation-confirmation.hbs -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			.wrap {
+				width: 100%;
+				background: #f6f7f9;
+				padding: 24px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.card {
+				max-width: 640px;
+				margin: 0 auto;
+				background: #ffffff;
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+				overflow: hidden;
+			}
+			.header {
+				background: #0f766e;
+				color: #ffffff;
+				padding: 20px 24px;
+			}
+			.header h2 {
+				margin: 0;
+				font-size: 20px;
+			}
+			.content {
+				padding: 24px;
+				color: #111827;
+				line-height: 1.6;
+				font-size: 15px;
+			}
+			.content p {
+				margin: 0 0 12px;
+			}
+			.cta {
+				display: inline-block;
+				padding: 12px 16px;
+				background: #0f766e;
+				color: #ffffff !important;
+				text-decoration: none;
+				border-radius: 8px;
+				font-weight: 600;
+			}
+			.muted {
+				color: #6b7280;
+				font-size: 13px;
+			}
+			.footer {
+				padding: 16px 24px;
+				text-align: center;
+				color: #6b7280;
+				font-size: 12px;
+			}
+			.hr {
+				border: none;
+				border-top: 1px solid #e5e7eb;
+				margin: 16px 0;
+			}
+			.info {
+				background: #f1f5f9;
+				padding: 12px 14px;
+				border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="card">
+				<div class="header">
+					<h2>Radhe Radhe, dear friend!</h2>
+				</div>
+				<div class="content">
+					{{#if amount}}
+						<p class="muted">We’ve received your recent donation of
+							₹{{amount}}. 🙏</p>
+						<div class="hr"></div>
+					{{/if}}
+
+					<p>
+						Congratulations on becoming the guardian of our beloved
+						<strong>{{cowName}}</strong>! Now an invisible yet
+						strong divine thread connects your hearts and souls on
+						this sacred path of service. Caring for a cow is the
+						most blessed and pure seva, filling life with light and
+						spiritual harmony.
+					</p>
+
+					<p>
+						Please don’t hesitate to ask us how your cow/bull is
+						doing, request photos, videos, and reports — we are
+						always nearby and will keep you informed of all news and
+						updates.
+					</p>
+
+					<div class="hr"></div>
+					<p><strong>Donation Information:</strong></p>
+					<div class="info">
+						<p>• Minimum monthly donation: ₹4,900.</p>
+						<p>• You may contribute monthly, or pay upfront for 1–12
+							months, 5 years, or more in advance.</p>
+						<p>• You can also sponsor the entire lifetime with a
+							one-time donation.</p>
+						<p>• Donations are non-refundable.</p>
+						<p>• In the event the cow passes away, funds will be
+							transferred to a new cow under your guardianship or
+							used for essential needs of the Gaushala.</p>
+						<p>• To keep your guardianship active, please continue
+							making the minimum monthly donation regularly.</p>
+						<p class="muted">
+							Remember, you lovingly support — but do not own.
+							Gaumata is a sacred being who remains under the care
+							of the ashram.
+						</p>
+					</div>
+
+					<div class="hr"></div>
+					<p><strong>How to Make Donations</strong></p>
+					<p>
+						You can donate through your personal account — it’s
+						convenient and secure:
+						<a href="{{websiteUrl}}" class="cta">Open My Account</a>
+					</p>
+
+					<p class="muted">
+						WhatsApp:
+						<a
+							href="https://wa.me/{{whatsappDigits}}"
+						>{{whatsappDisplay}}</a><br />
+						Email:
+						<a href="mailto:{{supportEmail}}">{{supportEmail}}</a>
+					</p>
+
+					<div class="hr"></div>
+					<p>
+						Thank you for your big heart and trust. Together we
+						create light and goodness in this world!
+					</p>
+					<p>With love and gratitude,<br />Kamdhenuseva Team<br />from
+						Shri Devraha Baba Ashram</p>
+				</div>
+				<div class="footer">
+					©
+					{{year}}
+					Dayadevraha. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
